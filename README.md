@@ -44,7 +44,9 @@ gcloud auth configure-docker
 ```
 5. Upload container to GCR (Google Container Register) by submitting it to Cloud Build with `gcloud builds submit`.
 ```bash
-gcloud builds submit --tag eu-gcr.io/[PROJECT-ID]/[IMAGE-NAME]
+gcloud builds submit --tag eu.gcr.io/[PROJECT-ID]/[IMAGE-NAME]
 ```
 The GCR location is provided to the `--tag` flag.
+
+6. Finally you deploy the container from the container registry to the cloud using Cloud Run.
 
